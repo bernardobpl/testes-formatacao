@@ -1,0 +1,46 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 700px;
+  overflow: auto;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.th span:hover{
+  cursor: pointer;
+  color: rgba(0,0,0, 0.7);
+}
+
+.body {
+  flex: 1;
+}
+
+.row {
+  cursor: pointer;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.row:hover .td{
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.td {
+  display: flex;
+  align-items: center;
+}
+
+export const SkeletonRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr 4fr;
+  grid-column-gap: 10px;
+  padding: 10px;
+`
